@@ -1,48 +1,225 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Architects+Daughter&family=Indie+Flower&family=Lobster&family=Pacifico&family=Staatliches&display=swap');
+
+* {
     padding: 0;
     margin: 0;
 }
-.all-meals{
+
+a {
+    text-decoration: none;
+    color: black;
+}
+body{
+    background-color: #f3d9b8;
+}
+.all-meals {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(5, 1fr);
     text-align: center;
     grid-row-gap: 30px;
 }
-.meals-link{
+
+.meals-link {
     text-decoration: none;
     color: red;
 }
-.img-link{
+
+.img-link {
     width: 150px;
     height: 150px;
     object-fit: cover;
 }
-.meal{
+
+.meal {
     text-align: center;
     margin-top: 50px;
 }
-.img-meal{
+
+.img-meal {
     width: 200px;
     height: 200px;
     object-fit: cover;
 }
-.mealDB-img{
+
+.mealDB-img {
     width: 150px;
     height: 150px;
     object-fit: cover;
+    border: 2px solid #b3c947;
+    border-radius: 20px;
 }
-.mealDB{
+
+.mealDB {
+    /*display: grid;*/
+    /*grid-template-columns: repeat(5,1fr);*/
+    /*text-align: center;*/
+    /*grid-row-gap: 30px;*/
+}
+
+.ings {
     display: grid;
-    grid-template-columns: repeat(5,1fr);
-    text-align: center;
-    grid-row-gap: 30px;
+    grid-template-columns: repeat(8, 1fr);
 }
-.ings{
-    display: grid;
-    grid-template-columns: repeat(8,1fr);
-}
-.ing-img{
+
+.ing-img {
     width: 70px;
     height: 70px;
     object-fit: cover;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.header-title {
+    font-family: 'Lobster', cursive, sans-serif;
+    color: aliceblue;
+}
+
+.container {
+    max-width: 1130px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.menu-item {
+    margin-left: 30px;
+    font-family: 'Staatliches', cursive, sans-serif;
+}
+
+.search-input {
+    border-radius: 10px;
+    height: 20px;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.link-search {
+    height: 24px;
+    color: #93d366;
+    background-color: #d5335c;
+    border-radius: 10px;
+    margin-left: 5px;
+    padding: 0 10px;
+    border: 1px solid #3f141c;
+}
+
+.header {
+    background-color: burlywood;
+}
+
+.meals-name {
+    font-family: 'Indie+Flower', cursive, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.one-img {
+    width: 300px;
+    height: 356px;
+    object-fit: cover;
+    border: 2px solid #0c4b86;
+    border-radius: 20px;
+    margin-right: 50px;
+}
+
+.ings_meal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.video-meal {
+    display: block;
+    margin: 0 auto;
+    width: 493px;
+    height: 260px;
+    position: absolute;
+    top: 697px;
+    right: 474px;
+}
+
+.instructions-meal {
+    font-family: 'Staatliches', cursive, sans-serif;
+    max-width: 550px;
+    margin: 20px auto;
+    font-size: 18px;
+}
+
+.ings-all {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 5px;
+    font-size: 18px;
+    font-family: 'Lobster', cursive, sans-serif;
+}
+
+.back-btn {
+    width: 40px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: #43e1dc;
+    border: 1px solid #3f141c;
+    margin-top: 20px;
+    font-family: 'Staatliches', cursive, sans-serif;
+}
+
+.iphone-img {
+    position: relative;
+    width: 650px;
+    height: 300px;
+    display: block;
+    margin: auto;
+}
+.video-title{
+    text-align: center;
+    font-family: 'Pacifico',cursive,sans-serif;
+    margin-bottom: 20px;
+    margin-top: 100px;
+}
+.str-meal{
+    font-family: 'Indie+Flower',cursive,sans-serif;
+    margin-right: 50px;
+}
+.params-products-img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+.params-products-title{
+    font-size: 19px;
+    font-family: 'rchitects+Daughter',cursive,sans-serif;
+    text-transform: capitalize;
+}
+.params-products{
+    border-radius: 5px;
+    text-align: center;
+    max-width: 200px;
+    margin: 0 auto;
+    box-shadow: 1px 0 26px 5px rgba(0, 0, 0, 0.75);
+}
+.el-img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 1px 0 26px 5px rgba(14, 13, 13, 0.75);}
+.el{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-row-gap: 40px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
