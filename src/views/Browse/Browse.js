@@ -18,7 +18,7 @@ const Browse = () => {
             }
         }
         fetchData()
-    },[])
+    },[params.search])
 
 
 
