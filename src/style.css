@@ -78,6 +78,7 @@ body{
 .header-title {
     font-family: 'Lobster', cursive, sans-serif;
     color: aliceblue;
+
 }
 
 .container {
@@ -238,6 +239,7 @@ body{
     font-size: 60px;
     color: aliceblue;
     text-align: center;
+    padding: 100px 0 40px 0;
 }
 .hero-btn{
     padding: 8px 30px;
@@ -251,5 +253,8 @@ body{
     justify-content: center;
 }
 .mobile-menu{
+    display: none;
+}
+.hidden{
     display: none;
 }
