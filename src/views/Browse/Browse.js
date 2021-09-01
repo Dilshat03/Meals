@@ -8,13 +8,16 @@ const Browse = () => {
     const [searchMeal, setSearchMeal] = useState([])
     const [error, setError] = useState()
 
-    useEffect(async ()=>{
-        const {data} = await axios(`https://www.themealdb.com/api/json/v1/1/search.php?s=${params.search}`)
-                if (data.meals){
-                    setSearchMeal(data.meals)
-                } else {
-                    setError('Мындай тамак жок!')
-                }
+    useEffect( ()=>{
+        const fetchData = async () =>{
+            const {data} = await axios(`https://www.themealdb.com/api/json/v1/1/search.php?s=${params.search}`)
+            if (data.meals){
+                setSearchMeal(data.meals)
+            } else {
+                setError('Мындай тамак жок!')
+            }
+        }
+        fetchData()
     },[])
 
 

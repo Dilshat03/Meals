@@ -5,9 +5,12 @@ import Search from "../../components/Search/Search";
 
 const MealsDb = () => {
     const [meals,setMeals] = useState([])
-    useEffect(async ()=>{
-        const {data:{meals}}= await axios('https://www.themealdb.com/api/json/v2/1/randomselection.php')
-            setMeals(meals)
+    useEffect( ()=>{
+       const fetchData = async () => {
+           const {data:{meals}}= await axios('https://www.themealdb.com/api/json/v2/1/randomselection.php')
+           setMeals(meals)
+       }
+       fetchData()
     },[])
 
 

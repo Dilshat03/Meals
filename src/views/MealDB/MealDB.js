@@ -11,12 +11,15 @@ const MealDb = () => {
     const [video, setVideo] = useState('')
 
 
-    useEffect(async () => {
-        const {data} = await axios(`https://www.themealdb.com/api/json/v1/1/search.php?s=${params.meal}`)
-        const obj = data.meals[0]
-        setMeal(obj)
-        let str = obj.strYoutube
-        setVideo(str.slice(str.indexOf('v=') + 2, str.length))
+    useEffect(() => {
+        const FetchData = async () => {
+            const {data} = await axios(`https://www.themealdb.com/api/json/v1/1/search.php?s=${params.meal}`)
+            const obj = data.meals[0]
+            setMeal(obj)
+            let str = obj.strYoutube
+            setVideo(str.slice(str.indexOf('v=') + 2, str.length))
+        }
+        FetchData()
 
     }, [params.meal])
 

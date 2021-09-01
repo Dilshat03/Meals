@@ -10,8 +10,11 @@ const IngridientsMeals = () => {
     const [product, setProduct] = useState([])
 
     useEffect(() => {
-        axios(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${params.products}`)
-            .then(({data}) => setProduct(data.meals))
+        const fetchData = async () => {
+            axios(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${params.products}`)
+                .then(({data}) => setProduct(data.meals))
+        }
+        fetchData()
     }, [params.products])
 
 
