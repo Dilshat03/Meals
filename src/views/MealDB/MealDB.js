@@ -1,23 +1,23 @@
 import React, {useEffect, useState} from 'react';
-import {useParams, Link,useHistory} from "react-router-dom";
-import apple from "./1200px-IPhone_8_vector.svg.png"
+import {useParams, Link} from "react-router-dom";
+import apple from "../../images/6497ac9fffbb4a4aba6269f49b136912.png"
 import axios from "axios";
+import Youtube from "../../components/Youtube/Youtube";
+import BackBtn from "../../components/BackBTN/BackBtn";
 
 const MealDb = () => {
-    const history = useHistory()
     const params = useParams()
     const [meal, setMeal] = useState({})
     const [video, setVideo] = useState('')
 
 
-    useEffect(() => {
-        axios(`https://www.themealdb.com/api/json/v1/1/search.php?s=${params.meal}`)
-            .then(({data}) => {
-                const obj = data.meals[0]
-                setMeal(obj)
-                let str = obj.strYoutube
-                setVideo(str.slice(str.indexOf('v=')+2,str.length))
-            })
+    useEffect(async () => {
+        const {data} = await axios(`https://www.themealdb.com/api/json/v1/1/search.php?s=${params.meal}`)
+        const obj = data.meals[0]
+        setMeal(obj)
+        let str = obj.strYoutube
+        setVideo(str.slice(str.indexOf('v=') + 2, str.length))
+
     }, [params.meal])
 
 
@@ -27,15 +27,12 @@ const MealDb = () => {
         }
         return acc
     }, [])
-    const handleBack = () =>{
-        history.goBack()
-    }
 
 
     return (
         <div className='container'>
             <div>
-                <button onClick={handleBack} className='back-btn'>Back</button>
+                <BackBtn/>
                 <div className='ings_meal'>
                     <div className='str-meals'>
                         <h5 className='str-meal'>Dish names :{meal.strMeal}</h5>
@@ -51,27 +48,22 @@ const MealDb = () => {
                                     <Link to={`/ingredients/${el}`}>
                                         <img src={`https://www.themealdb.com/images/ingredients/${el}.png`} alt=""
                                              className='ing-img'/>
-                                        <h5>{el}</h5>
+                                        <h5 className='meal-title'>{el}</h5>
                                     </Link>
                                 </div>
                             )
                         }
                     </div>
                 </div>
-
-
                 <div className="video-iphone">
-                    <h3 className='video-title'>Video instructions for cooking <i className="fas fa-arrow-down"></i></h3>
+                    <h3 className='video-title'>Video instructions for cooking <i className="fas fa-arrow-down"></i>
+                    </h3>
                     <img src={apple} className='iphone-img' alt=""/>
-                    <iframe className='video-meal' width="560" height="315" src={`https://www.youtube.com/embed/${video}`}
-                            title="YouTube video player" frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen>
-                        
-                    </iframe>
+                    <Youtube video={video}/>
                 </div>
                 <h5 className='instructions-meal'>Instructions: <br/>
-                    {meal.strInstructions}</h5>
+                    {meal.strInstructions}
+                </h5>
             </div>
         </div>
     );

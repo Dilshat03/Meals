@@ -138,27 +138,30 @@ body{
     align-items: center;
     text-align: center;
 }
-
+.video-iphone{
+    position: relative;
+}
 .video-meal {
     display: block;
     margin: 0 auto;
-    width: 493px;
-    height: 260px;
+    width: 426px;
+    height: 227px;
     position: absolute;
-    top: 697px;
-    right: 474px;
+    top: 91px;
+    right: 412px;
+    border-radius: 29px;
 }
 
 .instructions-meal {
     font-family: 'Staatliches', cursive, sans-serif;
-    max-width: 550px;
-    margin: 20px auto;
+    max-width: 400px;
+    margin: 80px auto;
     font-size: 18px;
 }
 
 .ings-all {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(6,1fr);
     grid-gap: 5px;
     font-size: 18px;
     font-family: 'Lobster', cursive, sans-serif;
@@ -175,9 +178,8 @@ body{
 }
 
 .iphone-img {
-    position: relative;
-    width: 650px;
-    height: 300px;
+    width: 647px;
+    height: 324px;
     display: block;
     margin: auto;
 }
@@ -220,6 +222,34 @@ body{
     grid-template-columns: repeat(3,1fr);
     grid-row-gap: 40px;
     justify-content: center;
-    align-items: center;
     text-align: center;
+}
+.error{
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Staatliches', cursive, sans-serif;
+}
+.background{
+    background: url("https://d2w1ef2ao9g8r9.cloudfront.net/images/_sameSizeHero/2_prepcook_200106_145740.jpg?mtime=20200106095740&focal=82.53%25+73.03%25&tmtime=20210630092459") no-repeat center/cover;
+    height: 100vh;
+}
+.hero-title{
+    font-family: 'Lobster', cursive, sans-serif;
+    font-size: 60px;
+    color: aliceblue;
+    text-align: center;
+}
+.hero-btn{
+    padding: 8px 30px;
+    border-radius: 20px 3px 20px 3px;
+    border: 1px solid white;
+    background-color: #93d366;
+    font-family: 'Pacifico',cursive,sans-serif;
+}
+.hero-link{
+    display: flex;
+    justify-content: center;
+}
+.mobile-menu{
+    display: none;
 }

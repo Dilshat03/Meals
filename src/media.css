@@ -1,0 +1,219 @@
+@media (max-width: 1200px) {
+    /*993-1200*/
+    .video-meal {
+        right: 235px;
+    }
+
+    .instructions-meal {
+        font-size: 16px;
+    }
+
+    .one-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .ing-img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .meal-title {
+        font-size: 14px;
+    }
+
+    .el-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .el-title {
+        font-size: 14px;
+    }
+
+    .params-products-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .header-title {
+        font-size: 27px;
+    }
+
+    .svg-logo {
+        height: 50px;
+        width: 50px;
+    }
+
+    .menu-item {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 992px) {
+    /*769-992*/
+    .hero-title {
+        font-size: 43px;
+    }
+
+    .hero-btn {
+        padding: 4px 20px;
+    }
+
+    .header-title {
+        font-size: 23px;
+    }
+
+    .svg-logo {
+        height: 40px;
+        width: 40px;
+    }
+
+    .menu-item {
+        font-size: 11px;
+    }
+
+    .all-meals {
+        grid-template-columns: repeat(3, 1fr);
+        grid-row-gap: 25px;
+    }
+
+    .search-input {
+        height: 15px;
+    }
+
+    .link-search {
+        padding: 1px 10px;
+    }
+
+    .mealDB-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .meals-name {
+        font-size: 14px;
+    }
+
+    .one-img {
+        width: 180px;
+        height: 180px;
+        margin: 20px 0;
+    }
+
+    .ings-all {
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 4px;
+    }
+
+    .iphone-img {
+        width: 500px;
+        height: 250px;
+    }
+
+    .instructions-meal {
+        font-size: 14px;
+    }
+
+    .ings_meal {
+        flex-direction: column;
+    }
+
+
+    .instructions-meal {
+        font-size: 12px;
+    }
+
+    .video-meal {
+        width: 350px;
+        height: 180px;
+        top: 75px;
+        right: 233px;
+    }
+    .el-img {
+        width: 70px;
+        height: 70px;
+    }
+    .params-products-img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    /*481-768*/
+    .hero-title {
+        font-size: 30px;
+    }
+    .hero-btn {
+        padding: 4px 16px;
+    }
+    .all-meals {
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 19px;
+    }
+    .str-meals {
+        font-size: 13px;
+    }
+    .iphone-img {
+        width: 350px;
+    }
+    .video-meal {
+        width: 230px;
+        height: 177px;
+        top: 77px;
+        right: 141px;
+    }
+    .params-products {
+        max-width: 150px;
+    }
+    .el-img {
+        width: 50px;
+        height: 50px;
+    }
+    .el-title {
+        font-size: 11px;
+    }
+    .ings-all {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .str-meals {
+        margin-left: 165px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    /*320-480*/
+    .ings-all {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .iphone-img {
+        width: 250px;
+        height: 150px;
+    }
+    .instructions-meal {
+        font-size: 10px;
+    }
+    .video-meal {
+        width: 165px;
+        height: 109px;
+        top: 69px;
+        right: 87px;
+    }
+    .el {
+        margin-top: 41px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-row-gap: 30px;
+    }
+    .params-products-img {
+        width: 70px;
+        height: 70px;
+    }
+    .params-products {
+        max-width: 120px;
+    }
+
+
+}
